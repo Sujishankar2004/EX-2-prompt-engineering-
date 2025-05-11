@@ -1,87 +1,118 @@
-# EX-2-prompt-engineering-Comparative Analysis of different types of Prompting patterns and explain with Various Test scenerios
-Name:SUJI S
-Reg.no:212222040164
-Experiment:
-Test and compare how different pattern models respond to various prompts (broad or unstructured) versus basic prompts (clearer and more refined) across multiple scenarios. 
+# EXP 5: Comparative Analysis of Naïve Prompting versus Basic Prompting Using ChatGPT Across Various Test Scenarios
 
-# 1 What is Prompting in Generative AI ?
-Prompting in Generative AI refers to the method of instructing a language model to produce a desired output by giving it specific input text. It acts as the guiding question or command that informs the model what task to perform or how to respond. There are various prompting techniques ranging from simple direct commands to complex, structured prompts for better control and accuracy. Prompting is crucial in controlling the quality, relevance, and depth of the AI-generated responses, especially in real-world applications like summarization, translation, or coding.
-# 2 Types of Prompting Patterns
-Prompting patterns can be broadly categorized into basic prompts and advanced prompts with varied structure and context levels:
+#### Name 	 : SUJI S
+#### Reg. No : 212222040164
 
-Basic Prompts: These are short, direct, and often unstructured instructions like “Write a story” or “Translate this sentence.” They are easy to generate but may lack precision in the output, leading to vague or off-topic results.
+## Aim:
+To test how ChatGPT responds to naïve prompts (broad or unstructured) versus basic prompts (clearer and more refined) across multiple scenarios, analyzing the quality, accuracy, and depth of the generated responses.
 
-Broad or Unstructured Prompts: These provide more creative freedom to the model, often without tight constraints, such as “Tell me about AI.” They allow diverse output but might lead to inconsistencies and lower accuracy.
+---
 
-Refined Prompts (Clearer or Structured): These are detailed, task-specific prompts that provide clear instructions and context to guide the model. Examples include “Write a professional email apologizing for a delayed delivery,” which narrows the model’s focus and improves output quality.
+## Algorithm:
 
-Few-Shot Prompting: Includes a few examples within the prompt to teach the model the task.
+### 1. Define the Two Prompt Types:
+- **Naïve Prompts**: Broad, vague, or open-ended prompts with little specificity.
+- **Basic Prompts**: Clear, detailed, and structured prompts that give specific instructions or context to guide the model.
 
-Zero-Shot Prompting: No example provided; the model has to infer the task from the instruction alone.
+### 2. Prepare Multiple Test Scenarios:
+Select various scenarios such as:
+- Generating a creative story.
+- Answering a factual question.
+- Summarizing an article or concept.
+- Providing advice or recommendations.
+- Or any other test scenario.
 
-Chain-of-Thought Prompting: Involves prompting the model to explain its reasoning step-by-step before giving the answer, improving accuracy for reasoning tasks.
+For each scenario, create both a naïve and a basic prompt. Ensure each pair of prompts targets the same task but with different levels of structure.
 
-# 3 Experiment: Comparative Test of Prompting Patterns
-To analyze and evaluate different types of prompting patterns, we conduct a comparative test under various scenarios.
+### 3. Run Experiments with ChatGPT:
+- Input the **naïve prompt** for each scenario and record the generated response.
+- Then input the corresponding **basic prompt** and capture that response.
+- Repeat this process for all selected scenarios to gather a full set of results.
 
-Test Setup: We selected multiple prompts ranging from unstructured and broad to refined and clear. We used both zero-shot and few-shot prompting techniques on an advanced LLM (e.g., GPT-4) to perform tasks like question answering, summarization, translation, and logical reasoning.
+### 4. Evaluate Responses:
+- Compare how ChatGPT performs when given naïve versus basic prompts and analyze the output based on **Quality**, **Accuracy**, and **Depth**.
+- Also, analyze whether ChatGPT consistently provides better results with basic prompts. Are there scenarios where naïve prompts work equally well?
 
-Scenario Examples:
+---
 
-Prompt 1 (Broad): “Explain climate change.”
+## Deliverables:
+1. A table comparing ChatGPT's responses to naïve and basic prompts across all scenarios.
+2. Analysis of how prompt clarity impacts the quality, accuracy, and depth of ChatGPT’s outputs.
+3. Summary of findings with insights on how to structure prompts for optimal results when using ChatGPT.
 
-Prompt 2 (Refined): “Summarize the causes and effects of climate change in three bullet points.”
+---
 
-Prompt 3 (Few-Shot): “Translate the following sentence to French: ‘How are you?’ Example: ‘Good morning’ → ‘Bonjour’.”
+## Example Test Scenarios:
 
-Prompt 4 (Chain-of-Thought): “Is 1234 divisible by 2? Think step-by-step before answering.”
+### Scenario 1: Generating a Creative Story
 
-In each case, the same model was used to generate responses under identical temperature and max-token settings to ensure fairness.
+#### Naïve Prompt:
+**Prompt**: "Tell me a story."
 
-# 4 Evaluation Metrics for Prompt Quality
-We evaluated the responses from each prompt pattern using three major qualitative dimensions:
+**Response**:
+"Once upon a time, there was a small village. The villagers lived peacefully until one day, a dragon appeared. The villagers were scared, but they soon realized that the dragon was friendly. The dragon helped them with many tasks, and they all became friends."
 
-Quality: Assessed based on grammar, structure, coherence, and professionalism of the output. Refined and chain-of-thought prompts produced the highest-quality responses.
+#### Basic Prompt:
+**Prompt**: "Write a creative story about a young girl who befriends a magical dragon in a small village and helps the villagers with a mysterious problem."
 
-Accuracy: Measured by comparing the factual correctness of the response to known standards or ground truth. Few-shot and structured prompts showed significantly better accuracy in tasks like translation and reasoning.
+**Response**:
+"A young girl named Lily lived in a quaint village nestled in a lush valley. One day, while wandering near the forest, she encountered a magnificent dragon with shimmering scales. The dragon, named Aelion, had magical powers but was lonely. Together, Lily and Aelion discovered that the village was under a curse, and with the dragon’s powers, they found a way to lift it. The villagers, once fearful, soon embraced Aelion as their protector."
 
-Depth: Determined by how thoroughly the model explained or elaborated on the response. Broad prompts often lacked depth, while chain-of-thought prompts produced detailed and logically sound answers.
+---
 
-# 5 Observations and Inference
-Broad or unstructured prompts led to highly variable outputs; they offered creativity but lacked reliability and precision.
+### Scenario 2: Answering a Factual Question
 
-Basic prompts produced results quickly but sometimes lacked clarity, context, or relevance.
+#### Naïve Prompt:
+**Prompt**: "What’s the capital of Japan?"
 
-Refined prompts consistently produced accurate, relevant, and well-structured responses, particularly in professional or academic settings.
+**Response**: "The capital of Japan is Tokyo."
 
-Chain-of-thought prompting significantly improved logical reasoning tasks, giving step-by-step explanations instead of final answers.
+#### Basic Prompt:
+**Prompt**: "What is the capital city of Japan, and can you mention some of the most famous landmarks there?"
 
-Few-shot prompting improved task learning by showing examples, which was especially helpful for translation, summarization, and classification.
+**Response**: "The capital city of Japan is Tokyo. Some of the most famous landmarks in Tokyo include the Tokyo Tower, the Imperial Palace, Shibuya Crossing, and Senso-ji Temple."
 
-# 6 Applications and Practical Impacts
-Understanding prompting patterns is critical in designing user queries for applications like chatbots, automated content generation, or AI tutoring systems. Structured and chain-of-thought prompts improve the reliability and usability of outputs in sensitive domains such as healthcare, finance, and education. Prompt design influences cost-effectiveness too, as better prompts reduce the need for post-processing or retries in production environments.
+---
 
-# 7 Limitations of Prompting Techniques
+### Scenario 3: Summarizing an Article
 
-Not all models respond equally to complex prompting patterns; older models may fail to process chain-of-thought instructions correctly.
+#### Naïve Prompt:
+**Prompt**: "Summarize the article."
 
-Poorly framed prompts can misguide the model, leading to hallucinations or incorrect outputs.
+**Response**: "The article talks about the importance of exercise for maintaining good health and discusses various types of physical activities."
 
-Prompting does not guarantee ethical responses and may still carry biases learned during model training.
+#### Basic Prompt:
+**Prompt**: "Summarize the article on the benefits of daily exercise, highlighting the key points about its impact on mental and physical health."
 
-Manual crafting of refined prompts is time-consuming and requires domain expertise.
+**Response**: "The article emphasizes that daily exercise is crucial for maintaining physical health by improving cardiovascular function and boosting immune systems. It also highlights its positive effects on mental health, reducing stress and improving mood through the release of endorphins. Additionally, it discusses the importance of combining aerobic and strength exercises for overall wellness."
 
-# 8 Future Improvements in Prompt Engineering
+---
 
-Development of automated prompt optimization tools using reinforcement learning or AI-guided tuning.
+## Results:
 
-Creation of prompt libraries or templates for various domains to reduce human effort in crafting high-quality instructions.
+| Scenario                           | Naïve Prompt Response  | Basic Prompt Response  | Quality | Accuracy | Depth |
+|------------------------------------|------------------------|------------------------|---------|----------|-------|
+| Generating a Creative Story        | Basic story with minimal plot | Detailed and engaging story with conflict resolution | 3/5     | 5/5      | 4/5   |
+| Answering a Factual Question       | Correct response       | Detailed response with landmarks | 5/5     | 5/5      | 5/5   |
+| Summarizing an Article            | Vague summary          | Clear and comprehensive summary | 3/5     | 5/5      | 5/5   |
 
-Integration of prompt tuning into LLM training for better few-shot learning performance.
+---
 
-Cross-lingual prompting research to create universally adaptable prompts in multiple languages.
+## Analysis:
 
-# 9  Conclusion
-This experiment reveals that the structure and type of prompt significantly influence the quality, accuracy, and depth of generated content. Broad prompts allow creativity but result in inconsistent outputs, while refined and structured prompts yield reliable and task-specific responses. Advanced techniques like chain-of-thought and few-shot prompting enhance performance in complex reasoning and learning tasks. Understanding and applying optimal prompting patterns is essential in unlocking the full potential of generative AI across diverse real-world scenarios.
+- **Quality**: Basic prompts generally led to more detailed and engaging responses, especially for creative or complex tasks.
+- **Accuracy**: For factual questions, both naïve and basic prompts produced accurate responses, but the basic prompt allowed for more context and completeness.
+- **Depth**: The depth of responses was significantly higher when using basic prompts, particularly in tasks requiring explanation or analysis.
 
+---
 
+## Summary of Findings:
+
+- **Naïve prompts** often result in short, less structured, and more generic responses. While they can be effective for simple tasks, they lack specificity, which limits their depth.
+- **Basic prompts** consistently lead to more accurate, detailed, and contextually rich responses. They are better suited for tasks requiring thoroughness, such as storytelling, factual responses with context, and summaries.
+- ChatGPT performs significantly better with **basic prompts**, particularly in complex or multi-faceted tasks. However, **naïve prompts** still work effectively for straightforward, factual questions.
+
+---
+
+## Conclusion:
+To achieve optimal results with ChatGPT, it’s important to use **clear, specific prompts** for complex tasks. **Naïve prompts** can be useful for simple requests but often fail to provide the level of detail and context necessary for more advanced or creative tasks.
